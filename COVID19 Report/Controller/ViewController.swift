@@ -8,13 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class CovidReportViewController: UIViewController {
+    var covidApi = CovidApi()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBAction func fetchReportButtonPressed(_ sender: UIButton) {
+        covidApi.fetchCovidResults()
+    }
 }
 
